@@ -4,17 +4,91 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@color/backgroundColor"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="calculate your"
-        android:layout_marginTop="15dp"
         android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/ageTextBackgroundColor"
+        android:padding="15dp"
+        android:text="age"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="in minutes"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/datePickerBtn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/textColor"
+        android:paddingVertical="20dp"
+        android:text="select date"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        app:backgroundTint="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/dateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="1/12/2023"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Selected Date"
+        android:textColor="@color/colorMute"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/resultDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="14400"
+        android:textAllCaps="true"
+        android:textColor="@color/textColor"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="in minutes till date"
+        android:textColor="@color/colorMute"
+        android:textSize="15sp" />
 
 </LinearLayout>
