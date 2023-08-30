@@ -60,7 +60,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="1/12/2023"
+        android:text=""
         android:textAllCaps="true"
         android:textColor="@color/textColor"
         android:textSize="25sp" />
@@ -78,7 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="14400"
+        android:text=""
         android:textAllCaps="true"
         android:textColor="@color/textColor"
         android:textSize="35sp" />
