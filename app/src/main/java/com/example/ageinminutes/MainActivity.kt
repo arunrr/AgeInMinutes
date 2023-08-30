@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import java.text.SimpleDateFormat
 import java.util.Calendar
+import java.util.Date
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
@@ -30,11 +31,12 @@ class MainActivity : AppCompatActivity() {
         val year = myCalender.get(Calendar.YEAR)
         val month = myCalender.get(Calendar.MONTH)
         val day = myCalender.get(Calendar.DAY_OF_MONTH)
+        val dayInMilli = 86400000
 
         val dateDisplay = findViewById<TextView>(R.id.dateDisplay)
         val timeInMinutesDisplay = findViewById<TextView>(R.id.resultDisplay)
 
-        DatePickerDialog(
+        val datePicker = DatePickerDialog(
             this,
             { _, selectedYear, selectedMonth, selectedDay ->
                 val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
@@ -57,7 +59,11 @@ class MainActivity : AppCompatActivity() {
 
 
             }, year, month, day
-        ).show()
+        )
+
+        // Limit the date picker to not select future dates
+        datePicker.datePicker.maxDate = Date().time - dayInMilli
+        datePicker.show()
 
     }
 
